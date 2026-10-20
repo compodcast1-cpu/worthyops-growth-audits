@@ -33,10 +33,23 @@ mark.five{background:rgba(255,255,255,.08);outline:1px dashed rgba(255,255,255,.
 .pill.mid{background:#facc15;color:#000;border-color:#facc15;box-shadow:0 0 20px rgba(250,204,21,.4)}
 .pill.ok{background:#22c55e;color:#000;border-color:#22c55e;box-shadow:0 0 20px rgba(34,197,94,.4)}
 @media (max-width:560px){.card summary .pill.keep{white-space:normal;text-align:center;max-width:42%;font-size:11.5px;line-height:1.2;padding:6px 10px}.card summary{gap:10px}}
-/* social blade highlight */
-.sb{grid-column:1/-1;display:flex;gap:12px;align-items:center;flex-wrap:wrap;background:var(--accent-soft);border:1.5px solid var(--accent);border-radius:12px;padding:12px 16px;box-shadow:0 0 28px rgba(61,139,255,.3);color:#fff;font-size:15px}
-.sb b{background:var(--accent);color:#000;border-radius:7px;padding:4px 11px;font-family:var(--mono);font-size:12px;font-weight:700;letter-spacing:.1em;text-transform:uppercase}
-.sbm{color:var(--accent);font-weight:700}
-.minis .mini{border-color:var(--accent-line);box-shadow:0 0 16px rgba(61,139,255,.18)}
-.minis .mini b{color:var(--accent)}
-.minis .mini span{color:var(--muted)}
+/* social blade block, refined */
+.sbm{color:var(--accent);font-weight:600}
+.sb{grid-column:1/-1;display:flex;align-items:center;gap:14px;background:none;border:0;box-shadow:none;padding:6px 0 0;color:var(--faint);font-size:12.5px}
+.sb b{order:1;position:relative;background:none;color:var(--accent);padding:0 0 0 15px;border-radius:0;font-family:var(--mono);font-size:11px;font-weight:500;letter-spacing:.18em;text-transform:uppercase}
+.sb b::before{content:"";position:absolute;left:0;top:50%;width:7px;height:7px;margin-top:-3.5px;border-radius:50%;background:var(--accent)}
+.sb::after{content:"";order:2;flex:1;height:1px;background:var(--line)}
+.sb span{order:3;white-space:nowrap}
+.minis{gap:1px;background:var(--line);border:1px solid var(--line);border-radius:14px;overflow:hidden;margin-top:-4px}
+.minis .mini{background:var(--surface);border:0;border-radius:0;box-shadow:none;padding:18px 10px}
+.minis .mini b{color:#fff;font-size:23px;font-weight:600;letter-spacing:-.01em}
+.minis .mini:nth-child(4) b{color:var(--accent)}
+.minis .mini span{color:var(--faint);font-size:9.5px;letter-spacing:.12em}
+@media (max-width:560px){.sb span{white-space:normal;text-align:right;font-size:11.5px}}
+/* status pills, refined */
+.pill,.pill.bad,.pill.mid,.pill.ok{box-shadow:none;font-family:var(--body);font-size:12.5px;font-weight:600;letter-spacing:.01em;padding:6px 13px 6px 11px;border-radius:99px;display:inline-flex;align-items:center;gap:8px;border-width:1px;border-style:solid}
+.pill::before{content:"";width:6px;height:6px;border-radius:50%;background:currentColor;flex:none}
+.pill.bad{background:rgba(248,113,113,.1);color:#fca5a5;border-color:rgba(248,113,113,.32)}
+.pill.mid{background:rgba(250,204,21,.09);color:#fde68a;border-color:rgba(250,204,21,.3)}
+.pill.ok{background:rgba(74,222,128,.09);color:#86efac;border-color:rgba(74,222,128,.3)}
+@media (max-width:560px){.card summary .pill.keep{max-width:44%;font-size:11.5px;padding:5px 10px 5px 9px;text-align:left}}
