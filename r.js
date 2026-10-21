@@ -22,8 +22,10 @@ var hl=E(L.hl_have.map(function(h){return '<div class="h on"><i>'+h+'</i><small>
 var checks=E(L.bio_checks.map(function(c){return '<li class="'+c[0]+'"><i></i>'+c[1]+'</li>'}));
 var note=L.cutnote?'<mark class="cut">&nbsp;</mark> '+L.cutnote+' &nbsp; ':'';
 var FX={Attract:['One action on every post','Built'],Profile:['Result-first bio, offer visible','Fixed'],Capture:['Start Here + Work With Me, one DM keyword','Built'],Choose:['One link, one next step','Fixed'],Convert:['Booked conversation, tracked','Built']};
+var TN={Attract:'Content',Profile:'Profile',Capture:'Bio link',Choose:'Offer',Convert:'Booking'};
+var WN={Attract:'Attract',Profile:'Engage',Capture:'Capture',Choose:'Nurture',Convert:'Convert'};
 function fwid(seq){var f={ok:.92,mid:.66,bad:.4},w=100,o=[];for(var i=0;i<seq.length;i++){w=w*f[seq[i]];o.push(Math.max(30,Math.round(w)))}return o}
-function funnel(rows,after){var seq=rows.map(function(x){return x[2]});var aseq=rows.map(function(){return 'ok'});var wd=fwid(after?aseq:seq);return E(rows.map(function(x,i){var lab=after?FX[x[0]][0]:x[1],st=after?FX[x[0]][1]:x[3],cls=after?'ok':x[2];return '<div class="fn-stage"><div class="fn-bar '+cls+(after?' wo':'')+'" style="width:'+wd[i]+'%"><span>'+x[0]+'</span></div><small><b>'+lab+'</b><em>'+st+'</em></small></div>'}))}
+function funnel(rows,after){var seq=rows.map(function(x){return x[2]});var aseq=rows.map(function(){return 'ok'});var wd=fwid(after?aseq:seq);return E(rows.map(function(x,i){var lab=after?FX[x[0]][0]:x[1],st=after?FX[x[0]][1]:x[3],cls=after?'ok':x[2];return '<div class="fn-stage"><div class="fn-bar '+cls+(after?' wo':'')+'" style="width:'+wd[i]+'%"><span>'+(after?WN[x[0]]:TN[x[0]])+'</span></div><small><b>'+lab+'</b><em>'+st+'</em></small></div>'}))}
 var fcmp='<div class="fcmp" style="grid-column:1/-1"><div class="fcol"><div class="fl"><b>Your funnel today</b><span>Where people drop off</span></div><div class="fnl">'+funnel(L.flow,false)+'</div></div><div class="fcol"><div class="fl up"><b>With WorthyOps</b><span>The target funnel &mdash; a goal, not a result</span></div><div class="fnl">'+funnel(L.flow,true)+'</div></div></div>';
 var capl=E(L.cap.map(function(c){return '<li><span>'+c+'</span></li>'}));
 var rows=E(L.tbl.map(function(r){return '<tr><th>'+r[0]+'</th><td>'+r[1]+'</td><td class="us">'+r[2]+'</td></tr>'}));
