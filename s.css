@@ -53,19 +53,3 @@ mark.five{background:rgba(255,255,255,.08);outline:1px dashed rgba(255,255,255,.
 .pill.mid{background:rgba(250,204,21,.09);color:#fde68a;border-color:rgba(250,204,21,.3)}
 .pill.ok{background:rgba(74,222,128,.09);color:#86efac;border-color:rgba(74,222,128,.3)}
 @media (max-width:560px){.card summary .pill.keep{max-width:44%;font-size:11.5px;padding:5px 10px 5px 9px;text-align:left}}
-
-/* engagement chart */
-.gr{margin:18px 0 6px;padding:18px 20px;background:var(--surface);border:1px solid var(--line);border-radius:14px}
-.grh{display:flex;justify-content:space-between;align-items:baseline;gap:12px;flex-wrap:wrap;margin-bottom:14px}
-.grh b{font-family:var(--mono);font-size:11px;font-weight:500;letter-spacing:.16em;text-transform:uppercase;color:var(--accent)}
-.grh span{font-size:12.5px;color:var(--faint)}
-.grr{display:grid;grid-template-columns:78px 1fr 56px;align-items:center;gap:12px;margin:9px 0}
-.grr i{font-style:normal;font-size:13px;color:var(--muted)}
-.grr em{font-style:normal;font-size:14px;font-weight:600;color:#fff;text-align:right}
-.grt{height:10px;background:var(--surface2);border-radius:99px;overflow:hidden}
-.grb{height:100%;border-radius:99px;background:#fca5a5;opacity:.9}
-.grb.up{background:#86efac}
-.grb.tg{background:var(--accent)}
-.gr p{margin:14px 0 0;font-size:13px;color:var(--faint);line-height:1.5}
-.gr p strong{color:#fff;font-weight:600}
-@media (max-width:560px){.grr{grid-template-columns:64px 1fr 48px;gap:8px}.gr{padding:16px}}
