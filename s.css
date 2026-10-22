@@ -76,3 +76,19 @@ mark.five{background:rgba(255,255,255,.08);outline:1px dashed rgba(255,255,255,.
 .fn-bar.bad+small em{color:#fca5a5}
 .fn-bar.wo+small em{color:var(--accent)}
 @media (max-width:620px){.fcmp{grid-template-columns:1fr;gap:26px}}
+
+/* client results */
+.tgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.tcard{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:22px;display:flex;flex-direction:column;gap:14px}
+.tph{width:64px;height:64px;border-radius:50%;border:1px dashed var(--accent-line);background:var(--accent-soft);overflow:hidden;flex:none}
+.tph img{width:100%;height:100%;object-fit:cover;display:block}
+.tname b{display:block;font-family:var(--display);font-size:17px;color:var(--fg)}
+.tname span{display:block;font-size:13px;color:var(--muted);margin-top:2px}
+.stars{display:flex;gap:4px}
+.stars i{width:16px;height:16px;background:var(--line);clip-path:polygon(50% 0,61% 35%,98% 35%,68% 57%,79% 91%,50% 70%,21% 91%,32% 57%,2% 35%,39% 35%)}
+.stars i.on{background:var(--accent)}
+.tres{display:flex;align-items:baseline;gap:8px;flex-wrap:wrap}
+.tres b{font-family:var(--display);font-size:38px;line-height:1;color:var(--accent)}
+.tres span{font-size:14px;color:var(--fg)}
+.tnote{margin:0;font-family:var(--mono);font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--faint)}
+@media (max-width:860px){.tgrid{grid-template-columns:1fr}}
